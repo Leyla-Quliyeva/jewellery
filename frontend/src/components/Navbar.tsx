@@ -2,9 +2,15 @@ import { Link, NavLink } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import type { RootState } from "@/store/store";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+
+  const count = useSelector((state: RootState) =>
+    state.cart.items.reduce((sum, item) => sum + item.quantity, 0),
+  );
 
   return (
     <div className="flex items-center justify-between -mt-7.5 -mb-11 font-semibold">
@@ -59,6 +65,12 @@ const Navbar = () => {
         {/* Səbət */}
         <Link to="/cart" className="relative p-3">
           <ShoppingBag className="w-6 h-6 text-black hover:text-gray-600" />
+
+          {count > 0 && (
+            <span className="absolute right-0 top-0 flex h-5 w-5 items-center justify-center rounded-full bg-orange-600 text-xs text-white">
+              {count}
+            </span>
+          )}
         </Link>
 
         <Menu

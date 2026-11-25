@@ -28,7 +28,7 @@ const Collection = () => {
 
   return (
     <>
-     <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8 mt-13 md:mt-15">
+      <div className="max-w-7xl mx-auto px-4  sm:px-6 lg:px-8 mt-13 md:mt-15">
         <div className="text-center mb-8 md:mb-12 bg-[#bcb6bb] min-h-32 px-4 py-6 md:p-5 tracking-wide font-semibold urbanist text-white">
           <h1 className="text-2xl sm:text-3xl md:text-4xl">Our Collection</h1>
 

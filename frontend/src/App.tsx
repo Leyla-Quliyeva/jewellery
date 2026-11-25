@@ -35,8 +35,6 @@ const App = () => {
         {/* <Route></Route> */}
       </Routes>
 
-
-
       <Toaster position="bottom-right" />
     </div>
   );
